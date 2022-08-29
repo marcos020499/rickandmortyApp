@@ -1,0 +1,6 @@
+module Pods_rickandmortyApp {
+  umbrella header "Pods-rickandmortyApp-umbrella.h"
+
+  export *
+  module * { export * }
+}
