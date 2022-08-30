@@ -1,6 +1,0 @@
-module Pods_rickandmortyApp_rickandmortyAppTests {
-  umbrella header "Pods-rickandmortyApp-rickandmortyAppTests-umbrella.h"
-
-  export *
-  module * { export * }
-}

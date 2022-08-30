@@ -2,12 +2,9 @@ import axios from "axios";
 import {
   configureStore,
   createReducer,
-  createAction,
   createAsyncThunk,
 } from "@reduxjs/toolkit";
-const tokenInitial =
-  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcm9udGVuZCI6dHJ1ZX0.dD52Ff9SFC3DO2nseBhhuuzCmMHdE7Q4QQnlCLlZviw";
-
+import { api } from "../components/Api";
 const initialState = {
   data: [],
   success: false,
@@ -16,16 +13,11 @@ const initialState = {
 };
 
 export const fetchDataAsync = createAsyncThunk(
-  "ticket/user",
-  async ({ data }, thunkAPI) => {
+  "fetch/data",
+  async ({ query }, thunkAPI) => {
     try {
       const response = await axios.post(
-        `${Route_Gateway}`,
-        {
-          headers: {
-            Authorization: `Bearer ${token}`,
-          },
-        }
+        `${api}${query}`,
       );
       return response.data;
     } catch (e) {
@@ -41,7 +33,7 @@ export const getReducer = createReducer(initialState, (builder) => {
       state.error = false;
       state.loading = false;
     })
-    .addCase(fetchDataAsync.loading, (state) => {
+    .addCase(fetchDataAsync.pending, (state) => {
       state.loading = true;
     })
     .addCase(fetchDataAsync.rejected, (state) => {
