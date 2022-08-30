@@ -25,7 +25,7 @@ const CharacterEpisodes = ({ bgColor }) => {
     );
   };
   return (
-    <View>
+    <View style={styles.container}>
       {loading === true ? (
         <ActivityIndicator color="#FF7C66" />
       ) : (
@@ -46,6 +46,9 @@ const CharacterEpisodes = ({ bgColor }) => {
 };
 export default CharacterEpisodes;
 const styles = StyleSheet.create({
+  container:{
+    marginBottom:20
+  },
   textTitle: {
     color: "white",
     textAlign: "center",

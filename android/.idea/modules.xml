@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/1029302911/react-native-gradle-plugin.iml" filepath="$PROJECT_DIR$/.idea/modules/1029302911/react-native-gradle-plugin.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/1029302911/react-native-gradle-plugin.main.iml" filepath="$PROJECT_DIR$/.idea/modules/1029302911/react-native-gradle-plugin.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/1029302911/react-native-gradle-plugin.test.iml" filepath="$PROJECT_DIR$/.idea/modules/1029302911/react-native-gradle-plugin.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/rickandmortyApp.iml" filepath="$PROJECT_DIR$/.idea/modules/rickandmortyApp.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/rickandmortyApp.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/rickandmortyApp.app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/rickandmortyApp.app.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/rickandmortyApp.app.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/rickandmortyApp.app.main.iml" filepath="$PROJECT_DIR$/.idea/modules/app/rickandmortyApp.app.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/rickandmortyApp.app.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/rickandmortyApp.app.unitTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/985877210/rickandmortyApp.lottie-react-native.iml" filepath="$PROJECT_DIR$/.idea/modules/985877210/rickandmortyApp.lottie-react-native.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/985877210/rickandmortyApp.lottie-react-native.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/985877210/rickandmortyApp.lottie-react-native.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/985877210/rickandmortyApp.lottie-react-native.main.iml" filepath="$PROJECT_DIR$/.idea/modules/985877210/rickandmortyApp.lottie-react-native.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/985877210/rickandmortyApp.lottie-react-native.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/985877210/rickandmortyApp.lottie-react-native.unitTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-731097172/rickandmortyApp.react-native-gesture-handler.iml" filepath="$PROJECT_DIR$/.idea/modules/-731097172/rickandmortyApp.react-native-gesture-handler.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-731097172/rickandmortyApp.react-native-gesture-handler.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/-731097172/rickandmortyApp.react-native-gesture-handler.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-731097172/rickandmortyApp.react-native-gesture-handler.main.iml" filepath="$PROJECT_DIR$/.idea/modules/-731097172/rickandmortyApp.react-native-gesture-handler.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-731097172/rickandmortyApp.react-native-gesture-handler.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/-731097172/rickandmortyApp.react-native-gesture-handler.unitTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-1054026308/rickandmortyApp.react-native-image-colors.iml" filepath="$PROJECT_DIR$/.idea/modules/-1054026308/rickandmortyApp.react-native-image-colors.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-1054026308/rickandmortyApp.react-native-image-colors.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/-1054026308/rickandmortyApp.react-native-image-colors.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-1054026308/rickandmortyApp.react-native-image-colors.main.iml" filepath="$PROJECT_DIR$/.idea/modules/-1054026308/rickandmortyApp.react-native-image-colors.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-1054026308/rickandmortyApp.react-native-image-colors.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/-1054026308/rickandmortyApp.react-native-image-colors.unitTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-111146050/rickandmortyApp.react-native-linear-gradient.iml" filepath="$PROJECT_DIR$/.idea/modules/-111146050/rickandmortyApp.react-native-linear-gradient.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-111146050/rickandmortyApp.react-native-linear-gradient.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/-111146050/rickandmortyApp.react-native-linear-gradient.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-111146050/rickandmortyApp.react-native-linear-gradient.main.iml" filepath="$PROJECT_DIR$/.idea/modules/-111146050/rickandmortyApp.react-native-linear-gradient.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-111146050/rickandmortyApp.react-native-linear-gradient.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/-111146050/rickandmortyApp.react-native-linear-gradient.unitTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-1853344491/rickandmortyApp.react-native-safe-area-context.iml" filepath="$PROJECT_DIR$/.idea/modules/-1853344491/rickandmortyApp.react-native-safe-area-context.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-1853344491/rickandmortyApp.react-native-safe-area-context.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/-1853344491/rickandmortyApp.react-native-safe-area-context.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-1853344491/rickandmortyApp.react-native-safe-area-context.main.iml" filepath="$PROJECT_DIR$/.idea/modules/-1853344491/rickandmortyApp.react-native-safe-area-context.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-1853344491/rickandmortyApp.react-native-safe-area-context.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/-1853344491/rickandmortyApp.react-native-safe-area-context.unitTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-2078672019/rickandmortyApp.react-native-screens.iml" filepath="$PROJECT_DIR$/.idea/modules/-2078672019/rickandmortyApp.react-native-screens.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-2078672019/rickandmortyApp.react-native-screens.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/-2078672019/rickandmortyApp.react-native-screens.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-2078672019/rickandmortyApp.react-native-screens.main.iml" filepath="$PROJECT_DIR$/.idea/modules/-2078672019/rickandmortyApp.react-native-screens.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-2078672019/rickandmortyApp.react-native-screens.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/-2078672019/rickandmortyApp.react-native-screens.unitTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/1852620714/rickandmortyApp.react-native-vector-icons.iml" filepath="$PROJECT_DIR$/.idea/modules/1852620714/rickandmortyApp.react-native-vector-icons.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/1852620714/rickandmortyApp.react-native-vector-icons.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/1852620714/rickandmortyApp.react-native-vector-icons.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/1852620714/rickandmortyApp.react-native-vector-icons.main.iml" filepath="$PROJECT_DIR$/.idea/modules/1852620714/rickandmortyApp.react-native-vector-icons.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/1852620714/rickandmortyApp.react-native-vector-icons.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/1852620714/rickandmortyApp.react-native-vector-icons.unitTest.iml" />
+    </modules>
+  </component>
+</project>

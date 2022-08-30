@@ -41,7 +41,7 @@ const CharacterDetails = ({ route, navigation }) => {
         }}
         style={styles.feedback}
       >
-        <Icon size={45} name="angle-left" color={"white"} />
+        <View style={styles.iconView}><Icon size={45} name="angle-left" color={"white"} /></View>
       </TouchableOpacity>
       <ScrollViewIndicator
         scrollIndicatorStyle={{ backgroundColor: "#FF7C66", height: 50 }}
@@ -54,13 +54,13 @@ const CharacterDetails = ({ route, navigation }) => {
             {item?.name} ({item?.status})
           </Text>
           <Text style={[GlobalStyle.regular, styles.textSpecie]}>
-            ( {item?.species}-{item?.gender} )
+            Especie: ( {item?.species}-{item?.gender} )
           </Text>
           <Text style={[GlobalStyle.regular, styles.textSpecie]}>
-            origen: {item?.origin?.name}
+            Origen: {item?.origin?.name}
           </Text>
           <Text style={[GlobalStyle.regular, styles.textSpecie]}>
-            ubicación: {item?.location?.name}
+            Ubicación: {item?.location?.name}
           </Text>
         </Gradient>
         <CharacterEpisodes bgColor={bgColor} />
@@ -87,10 +87,15 @@ const styles = StyleSheet.create({
     borderRadius: 10,
     zIndex: 1,
     left: "5%",
+    width:40
   },
   textSpecie: {
     marginTop: 20,
     color: "white",
   },
+  iconView:{
+    display:'flex',
+    alignSelf:'center'
+  }
 });
 export default CharacterDetails;
