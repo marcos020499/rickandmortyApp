@@ -1,18 +1,16 @@
-import React, { useRef, useEffect } from "react";
-import { Text, View, Animated, Easing, TouchableOpacity } from "react-native";
+import React from "react";
+import { View } from "react-native";
 import { useIsFocused } from "@react-navigation/native";
-import LottieView from "lottie-react-native";
 import Container from "../components/Container";
 import SearchBar from "../components/SearchBar";
-import ListResult from "../components/ListResult";
+import CharacterCard from "../components/CharacterCard";
 const HomeScreen = ({ navigation, route }) => {
   const isFocused = useIsFocused();
-
   return (
     <Container isFocused={isFocused} >
       <View >
         <SearchBar/>
-        <ListResult navigation={navigation}/>
+        <CharacterCard navigation={navigation}/>
       </View>
     </Container>
   );

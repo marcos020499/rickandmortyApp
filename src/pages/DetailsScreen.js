@@ -1,5 +1,5 @@
 import React, { useRef, useEffect } from "react";
-import { Text, View, Animated, Easing, TouchableOpacity } from "react-native";
+import { Text, View, Animated, Easing} from "react-native";
 import { useIsFocused } from "@react-navigation/native";
 import Container from "../components/Container";
 import CharacterDetails from "../components/CharacterDetails";
@@ -17,7 +17,7 @@ const DetailsScreen = ({ navigation, route }) => {
   }, []);
   return (
     <Container isFocused={isFocused}>
-      <View style={{ height: "100%" }}>
+      <View style={{ height: "100%", }}>
         <CharacterDetails navigation={navigation} route={route} />
       </View>
     </Container>

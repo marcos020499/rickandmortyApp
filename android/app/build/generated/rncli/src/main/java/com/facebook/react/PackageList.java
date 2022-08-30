@@ -17,6 +17,8 @@ import com.airbnb.android.react.lottie.LottiePackage;
 import com.swmansion.gesturehandler.RNGestureHandlerPackage;
 // react-native-image-colors
 import com.reactnativeimagecolors.ImageColorsPackage;
+// react-native-linear-gradient
+import com.BV.LinearGradient.LinearGradientPackage;
 // react-native-safe-area-context
 import com.th3rdwave.safeareacontext.SafeAreaContextPackage;
 // react-native-screens
@@ -71,6 +73,7 @@ public class PackageList {
       new LottiePackage(),
       new RNGestureHandlerPackage(),
       new ImageColorsPackage(),
+      new LinearGradientPackage(),
       new SafeAreaContextPackage(),
       new RNScreensPackage(),
       new VectorIconsPackage()
