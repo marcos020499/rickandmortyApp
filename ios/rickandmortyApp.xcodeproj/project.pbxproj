@@ -14,6 +14,11 @@
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		7699B88040F8A987B510C191 /* libPods-rickandmortyApp-rickandmortyAppTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19F6CBCC0A4E27FBF8BF4A61 /* libPods-rickandmortyApp-rickandmortyAppTests.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
+		B778534FE5AD4C7AB60859DA /* Syne Bold 700.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B23E5310454E47F494C3825F /* Syne Bold 700.ttf */; };
+		0E180EEE172C49629F5405AF /* Syne.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3EF6E54FF0E04753982F101D /* Syne.ttf */; };
+		1066B8276AB64A72BE76A296 /* Syne Bold 700.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B0AD46148AB046CBA8F977D9 /* Syne Bold 700.ttf */; };
+		E18032AD6E3C43BE8AC164F7 /* Syne ExtraBold 800.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4947FFF4A7B84AC793913B72 /* Syne ExtraBold 800.ttf */; };
+		7D8C2B4DFFAC4B1EA6DAFCC1 /* Syne.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 06DC56C9A2714C2BB955B79C /* Syne.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +49,11 @@
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = rickandmortyApp/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		89C6BE57DB24E9ADA2F236DE /* Pods-rickandmortyApp-rickandmortyAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-rickandmortyApp-rickandmortyAppTests.release.xcconfig"; path = "Target Support Files/Pods-rickandmortyApp-rickandmortyAppTests/Pods-rickandmortyApp-rickandmortyAppTests.release.xcconfig"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
+		B23E5310454E47F494C3825F /* Syne Bold 700.ttf */ = {isa = PBXFileReference; name = "Syne Bold 700.ttf"; path = "../src/fonts/fonts/Syne Bold 700.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		3EF6E54FF0E04753982F101D /* Syne.ttf */ = {isa = PBXFileReference; name = "Syne.ttf"; path = "../src/fonts/fonts/Syne.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		B0AD46148AB046CBA8F977D9 /* Syne Bold 700.ttf */ = {isa = PBXFileReference; name = "Syne Bold 700.ttf"; path = "../src/fonts/Syne Bold 700.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		4947FFF4A7B84AC793913B72 /* Syne ExtraBold 800.ttf */ = {isa = PBXFileReference; name = "Syne ExtraBold 800.ttf"; path = "../src/fonts/Syne ExtraBold 800.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		06DC56C9A2714C2BB955B79C /* Syne.ttf */ = {isa = PBXFileReference; name = "Syne.ttf"; path = "../src/fonts/Syne.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +132,7 @@
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				BBD78D7AC51CEA395F1C20DB /* Pods */,
+				476453EC17AB41E194980426 /* Resources */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -147,6 +158,19 @@
 			);
 			path = Pods;
 			sourceTree = "<group>";
+		};
+		476453EC17AB41E194980426 /* Resources */ = {
+			isa = "PBXGroup";
+			children = (
+				B23E5310454E47F494C3825F /* Syne Bold 700.ttf */,
+				3EF6E54FF0E04753982F101D /* Syne.ttf */,
+				B0AD46148AB046CBA8F977D9 /* Syne Bold 700.ttf */,
+				4947FFF4A7B84AC793913B72 /* Syne ExtraBold 800.ttf */,
+				06DC56C9A2714C2BB955B79C /* Syne.ttf */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+			path = "";
 		};
 /* End PBXGroup section */
 
@@ -244,6 +268,11 @@
 			files = (
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
+				B778534FE5AD4C7AB60859DA /* Syne Bold 700.ttf in Resources */,
+				0E180EEE172C49629F5405AF /* Syne.ttf in Resources */,
+				1066B8276AB64A72BE76A296 /* Syne Bold 700.ttf in Resources */,
+				E18032AD6E3C43BE8AC164F7 /* Syne ExtraBold 800.ttf in Resources */,
+				7D8C2B4DFFAC4B1EA6DAFCC1 /* Syne.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
