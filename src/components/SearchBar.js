@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import {
   View,
   TextInput,
-  Text,
   TouchableWithoutFeedback,
   StyleSheet,
 } from "react-native";
@@ -18,6 +17,8 @@ const SearchBar = () => {
       <TextInput
         value={query}
         onChangeText={setQuery}
+        placeholderTextColor={'white'}
+        placeholder="Que personaje estas buscando?"
         style={[styles.textInput, GlobalStyle.regular]}
       />
       <TouchableWithoutFeedback
@@ -45,10 +46,11 @@ const styles = StyleSheet.create({
     backgroundColor: "rgba(229, 229, 229, 0.4)",
     borderRadius: 14,
     height: 50,
-    width: "85%",
+    width: "93%",
     fontSize: 18,
     paddingLeft: 15,
     color: "rgba(229, 229, 229, 0.7)",
+    textDecorationLine:'none'
   },
   feedback:{
     position:'absolute',

@@ -4,19 +4,10 @@ import { useIsFocused } from "@react-navigation/native";
 import LottieView from "lottie-react-native";
 import Container from "../components/Container";
 import TouchableComponent from "../components/TouchableComponent";
+import Lottie from "../components/Lottie";
 const Splash = ({ navigation }) => {
   const isFocused = useIsFocused();
   const [time, setTime] = useState();
-  const progress = useRef(new Animated.Value(0)).current;
-  useEffect(() => {
-    Animated.timing(progress, {
-      toValue: 1,
-      delay: 10,
-      duration: 4000,
-      easing: Easing.linear,
-      useNativeDriver: true,
-    }).start();
-  }, []);
   useEffect(() => {
     if (isFocused === true) {
       setTime(
@@ -30,13 +21,9 @@ const Splash = ({ navigation }) => {
     }
   }, [isFocused]);
   return (
-    <Container>
+    <Container isFocused={isFocused}>
       <View style={{ height: "100%" }}>
-        <LottieView
-        autoPlay
-          progress={progress}
-          source={require("../../assets/39133-the-morty-dance-loader.json")}
-        />
+        <Lottie width={400} height={'100%'}/>
       </View>
       <TouchableComponent navigation={navigation} name={'Home'}/>
     </Container>

@@ -1,4 +1,4 @@
-import React, {useEffect, useState, useRef} from 'react';
+import React, { useRef, useState, useEffect } from "react";
 import {
   View,
   Text,
@@ -6,39 +6,53 @@ import {
   TouchableOpacity,
   FlatList,
   ActivityIndicator,
-} from 'react-native';
-import {useSelector} from 'react-redux';
+} from "react-native";
+import { useSelector } from "react-redux";
 import Icon from "react-native-vector-icons/FontAwesome";
-import ScrollViewIndicator from 'react-native-scroll-indicator';
-import GlobalStyle from './GlobalStyle';
-import { FadeInImage } from './FadeInImage';
-const CharacterCard = ({navigation, route}) => {
-  const {data, loading} = useSelector(state => state);
-  
-  _Item = ({item, index}) => {
+import GlobalStyle from "./GlobalStyle";
+import { FadeInImage } from "./FadeInImage";
+import Lottie from "./Lottie";
+const CharacterCard = ({ navigation, route }) => {
+  const { data, loading } = useSelector((state) => state);
+  _Item = ({ item, index }) => {
     return (
       <TouchableOpacity
         key={index}
         style={[styles.containerProduct]}
         activeOpacity={1}
-        onPress={() => {navigation.navigate('Details', {item:item})}}>
-          <View style={styles.containerData}>
+        onPress={() => {
+          navigation.navigate("Details", { item: item });
+        }}
+      >
+        <View style={styles.containerData}>
           <FadeInImage uri={item?.image} key={item + index} route={route} />
-            <Text style={[GlobalStyle.bold, styles.textName]}>{item?.name}</Text>
-            <Icon size={35} name="angle-right" color={"white"} />
-          </View>
+          <Text style={[GlobalStyle.bold, styles.textName]}>{item?.name}</Text>
+          <Icon size={35} name="angle-right" color={"white"} />
+        </View>
       </TouchableOpacity>
     );
   };
   return (
-    <View style={{ height: '100%'}}>
-      {loading===true?(
-        <ActivityIndicator color='#FF7C66'/>
-      ):(
-      <ScrollViewIndicator
-        scrollIndicatorStyle={{backgroundColor: '#FF7C66', height: 50}}>
-        <FlatList data={data?.results} renderItem={_Item} />
-      </ScrollViewIndicator>
+    <View style={{ height: "100%" }}>
+      {loading === true ? (
+        <ActivityIndicator color="#FF7C66" size={30} />
+      ) : (
+        <View>
+          {data?.results === undefined ? (
+            <View>
+              <Text style={[GlobalStyle.bold, styles.textInit]}>
+                Ingresa el nombre de un personaje para comenzar una busqueda
+              </Text>
+              <Lottie width={140} height={140}/>
+            </View>
+          ) : (
+            <FlatList
+              data={data?.results}
+              renderItem={_Item}
+              keyExtractor={(e, i) => e + i.toString()}
+            />
+          )}
+        </View>
       )}
     </View>
   );
@@ -46,18 +60,18 @@ const CharacterCard = ({navigation, route}) => {
 export default CharacterCard;
 const styles = StyleSheet.create({
   containerProduct: {
-    display: 'flex',
-    backgroundColor:'#232A30',
-    alignItems: 'center',
-    alignSelf: 'center',
-    width: '94%',
+    display: "flex",
+    backgroundColor: "#232A30",
+    alignItems: "center",
+    alignSelf: "center",
+    width: "94%",
     borderRadius: 20,
     marginTop: 35,
     height: 130,
-    justifyContent: 'space-between',
-    borderColor: 'rgba(196, 196, 196, 0.3)',
+    justifyContent: "space-between",
+    borderColor: "rgba(196, 196, 196, 0.3)",
     borderWidth: 1,
-    shadowColor: 'white',
+    shadowColor: "white",
     shadowOffset: {
       width: 2,
       height: 2,
@@ -66,21 +80,28 @@ const styles = StyleSheet.create({
     shadowRadius: 5,
     elevation: 20,
   },
-  containerData:{
-    top:'4%',
-    display:'flex',
-    flexDirection:'row',
-    width:'90%',
-    alignItems:'center',
-    justifyContent:'space-between'
+  containerData: {
+    top: "2%",
+    display: "flex",
+    flexDirection: "row",
+    width: "90%",
+    alignItems: "center",
+    justifyContent: "space-between",
   },
-  textName:{
-    color:'white',
-    width:'40%'
+  textName: {
+    color: "white",
+    width: "40%",
   },
-  image:{
-    width:100,
-    borderRadius:10,
-    height:100
+  image: {
+    width: 100,
+    borderRadius: 10,
+    height: 100,
+  },
+  textInit: {
+    color: "white",
+    top: 250,
+    fontSize: 15,
+    letterSpacing: 1,
+    marginHorizontal: 25,
   }
 });
