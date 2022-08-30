@@ -16,11 +16,13 @@ export const fetchDataAsync = createAsyncThunk(
   "fetch/data",
   async ({ query }, thunkAPI) => {
     try {
-      const response = await axios.post(
+      const response = await axios.get(
         `${api}${query}`,
       );
+      console.log(response.data)
       return response.data;
     } catch (e) {
+      console.log(e.response.data)
       return thunkAPI.rejectWithValue("error", e.response.data);
     }
   }

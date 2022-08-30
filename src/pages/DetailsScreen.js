@@ -1,9 +1,9 @@
 import React, { useRef, useEffect } from "react";
-import { Text, View, Animated, Easing } from "react-native";
+import { Text, View, Animated, Easing, TouchableOpacity } from "react-native";
 import { useIsFocused } from "@react-navigation/native";
-import LottieView from "lottie-react-native";
 import Container from "../components/Container";
-const Home = ({ navigation, route }) => {
+import CharacterDetails from "../components/CharacterDetails";
+const DetailsScreen = ({ navigation, route }) => {
   const isFocused = useIsFocused();
   const progress = useRef(new Animated.Value(0)).current;
   useEffect(() => {
@@ -18,15 +18,9 @@ const Home = ({ navigation, route }) => {
   return (
     <Container isFocused={isFocused}>
       <View style={{ height: "100%" }}>
-        <LottieView
-          progress={progress}
-          source={require("../../assets/39133-the-morty-dance-loader.json")}
-          autoPlay
-        />
-        <Text>hello</Text>
-        <Text>hello</Text>
+        <CharacterDetails navigation={navigation} route={route} />
       </View>
     </Container>
   );
 };
-export default Home;
+export default DetailsScreen;

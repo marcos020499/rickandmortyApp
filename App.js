@@ -1,6 +1,5 @@
 import React from "react";
-
-import {Text,View} from 'react-native'
+import './IgnoreWarnings'
 import Routes from "./src/pages/Routes";
 const App=()=> {
   return (

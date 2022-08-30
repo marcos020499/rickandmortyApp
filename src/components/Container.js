@@ -16,11 +16,12 @@ const Container = ({ children, isFocused }) => {
   }, [isFocused]);
   const colors = color.interpolate({
     inputRange: [0, 1],
-    outputRange: ["#232A30", "rgba(229, 229, 229, 1);"],
+    outputRange: ["#232A30", "#232A30"],
   });
   const styles = StyleSheet.create({
     container: {
       flex: 1,
+      padding: "5%",
       height: "100%",
     },
   });
