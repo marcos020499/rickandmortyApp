@@ -1,7 +1,10 @@
 import React, { useRef, useEffect } from "react";
 import { StyleSheet, Animated } from "react-native";
+
 const Container = ({ children, isFocused }) => {
+  
   const color = useRef(new Animated.Value(0)).current;
+  //animation interpolate background color
   useEffect(() => {
     Animated.parallel([
       Animated.timing(color, {
@@ -11,10 +14,12 @@ const Container = ({ children, isFocused }) => {
       }),
     ]).start();
   }, [isFocused]);
+
   const colors = color.interpolate({
     inputRange: [0, 1],
-    outputRange: ["rgba(229, 229, 229, 0.7)", "#232A30"],
+    outputRange: ["#E5E5E5", "#232A30"],
   });
+
   const styles = StyleSheet.create({
     container: {
       flex: 1,
@@ -22,6 +27,7 @@ const Container = ({ children, isFocused }) => {
       height: "100%",
     },
   });
+
   return (
     <Animated.View style={(styles.container, { backgroundColor: colors })}>
       {children}

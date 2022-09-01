@@ -1,5 +1,4 @@
 import React, {useState, useEffect} from 'react';
-import 'react-native-gesture-handler';
 import {createStackNavigator} from '@react-navigation/stack';
 import {NavigationContainer} from '@react-navigation/native';
 import HomeScreen from './HomeScreen'
@@ -7,9 +6,12 @@ import DetailsScreen from './DetailsScreen';
 import Splash from './Splash';
 import Toast from 'react-native-root-toast';
 import { BackHandler } from 'react-native';
+
 const Stack = createStackNavigator();
 const Routes = () => {
   const [exitApp, setExitApp] = useState(false);
+
+  //exit app with button return
   const backAction = () => {
     if (exitApp == false) {
       setExitApp(true);
@@ -23,6 +25,7 @@ const Routes = () => {
     }
     return true;
   };
+
   useEffect(() => {
     const backHandler = BackHandler.addEventListener(
       'hardwareBackPress',
@@ -30,6 +33,7 @@ const Routes = () => {
     );
     return () => backHandler.remove();
   }, [exitApp]);
+
   return (
     <NavigationContainer>
       <Stack.Navigator

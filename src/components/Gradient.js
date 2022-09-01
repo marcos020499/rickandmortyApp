@@ -1,7 +1,9 @@
 import React from "react";
 import { View, StyleSheet } from "react-native";
 import LinearGradient from "react-native-linear-gradient";
+
 const Gradient = ({ children, bgColor }) => {
+  //gradient containers
   return (
     <LinearGradient
       style={styles.containerData}
@@ -16,7 +18,7 @@ const Gradient = ({ children, bgColor }) => {
 const styles = StyleSheet.create({
   containerData: {
     borderRadius: 10,
-    borderWidth: 1,
+    borderWidth: 1.5,
     width: "90%",
     marginTop: "2%",
     paddingVertical: 10,
@@ -24,6 +26,8 @@ const styles = StyleSheet.create({
     display: "flex",
     alignItems: "center",
     alignSelf: "center",
+    shadowColor: "white",
+    elevation: 2,
   },
 });
 export default Gradient;

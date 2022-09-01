@@ -2,7 +2,6 @@ import React from "react";
 import { StyleSheet, View } from "react-native";
 
 const TextDetails = ({ children }) => {
-
   return (
     <View style={styles.containerText}>
       {children}

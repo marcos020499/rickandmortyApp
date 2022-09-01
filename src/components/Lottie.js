@@ -1,7 +1,9 @@
 import React, { useRef, useEffect } from "react";
 import { View, Animated, Easing, StyleSheet} from "react-native";
 import LottieView from "lottie-react-native";
+
 const Lottie = ({width, height}) => {
+  //lottie animation
   const progress = useRef(new Animated.Value(0)).current;
   useEffect(() => {
     Animated.timing(progress, {

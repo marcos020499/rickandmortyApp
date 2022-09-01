@@ -5,11 +5,13 @@ import {
   TouchableWithoutFeedback,
 } from 'react-native';
 const TouchableComponent = ({navigation, name}) => {
+  //onPress next page
+  const onPress =()=>{
+    navigation.navigate(name);
+  }
   return (
       <TouchableWithoutFeedback
-        onPress={() => {
-          navigation.navigate(name);
-        }}>
+        onPress={() => {onPress()}}>
         <View style={styles.nextPage}></View>
       </TouchableWithoutFeedback>
   );

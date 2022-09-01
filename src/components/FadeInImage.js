@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { ActivityIndicator, Animated, StyleSheet, View } from "react-native";
 import { useAnimation } from "../hooks/useAnimation";
 export const FadeInImage = ({ uri, route }) => {
+  //fade in images
   const { fadeIn } = useAnimation();
   const [isLoading, setIsLoading] = useState(true);
   const finishLoading = () => {
@@ -11,6 +12,7 @@ export const FadeInImage = ({ uri, route }) => {
   const onError = () => {
     setIsLoading(false);
   };
+  
   return (
     <View>
       {isLoading && (
@@ -46,9 +48,11 @@ const styles = StyleSheet.create({
   },
   characterImages: {
     width: "100%",
-    height: 450,
+    height: 350,
     zIndex: 1,
     opacity: 0.66,
     backgroundColor: "black",
+    borderBottomLeftRadius:30,
+    borderBottomRightRadius:30
   },
 });

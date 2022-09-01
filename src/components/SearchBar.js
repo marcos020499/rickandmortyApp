@@ -10,8 +10,13 @@ import Icon from 'react-native-vector-icons/FontAwesome';
 import GlobalStyle from "./GlobalStyle";
 import { useDispatch } from "react-redux";
 const SearchBar = () => {
+  //search name character
   const dispatch = useDispatch();
   const [query, setQuery] = useState("");
+  const onPress =()=>{
+    dispatch(fetchDataAsync({ query }));
+  }
+
   return (
     <View style={styles.Search}>
       <TextInput
@@ -21,11 +26,7 @@ const SearchBar = () => {
         placeholder="Que personaje estas buscando?"
         style={[styles.textInput, GlobalStyle.regular]}
       />
-      <TouchableWithoutFeedback
-        onPress={() => {
-          dispatch(fetchDataAsync({ query }));
-        }}
-      >
+      <TouchableWithoutFeedback onPress={() => {onPress()}}>
         <View style={styles.feedback}>
         <Icon size={38} name="search" style={styles.icon}/>
         </View>

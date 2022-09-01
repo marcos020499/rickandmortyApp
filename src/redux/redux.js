@@ -10,10 +10,9 @@ const initialState = {
   data: [],
   success: false,
   loading: false,
-  error: false,
   episode: [],
 };
-
+//get characters data
 export const fetchDataAsync = createAsyncThunk(
   "fetch/data",
   async ({ query }, thunkAPI) => {
@@ -25,9 +24,11 @@ export const fetchDataAsync = createAsyncThunk(
     }
   }
 );
+//get episodes
 export const episodesAsync = createAsyncThunk(
   "episode/data",
   async ({ id }, thunkAPI) => {
+    console.log('ids',id)
     try {
       const response = await axios.get(`${id}`);
       return response.data;
@@ -36,7 +37,9 @@ export const episodesAsync = createAsyncThunk(
     }
   }
 );
+
 export const resetStates = createAction("reset/states");
+
 export const getReducer = createReducer(initialState, (builder) => {
   builder
     .addCase(fetchDataAsync.fulfilled, (state, action) => {
@@ -47,11 +50,6 @@ export const getReducer = createReducer(initialState, (builder) => {
     })
     .addCase(fetchDataAsync.pending, (state) => {
       state.loading = true;
-    })
-    .addCase(fetchDataAsync.rejected, (state) => {
-      state.error = true;
-      state.success = false;
-      state.loading = false;
     })
     .addCase(episodesAsync.fulfilled, (state, action) => {
       state.episode.push(action.payload);

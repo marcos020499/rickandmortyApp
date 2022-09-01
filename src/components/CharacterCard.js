@@ -12,17 +12,20 @@ import Icon from "react-native-vector-icons/FontAwesome";
 import GlobalStyle from "./GlobalStyle";
 import { FadeInImage } from "./FadeInImage";
 import Lottie from "./Lottie";
+
 const CharacterCard = ({ navigation, route }) => {
   const { data, loading } = useSelector((state) => state);
+  const onPress =(item)=>{
+    navigation.navigate("Details", { item: item });
+  }
+  //result items render
   _Item = ({ item, index }) => {
     return (
       <TouchableOpacity
         key={index}
         style={[styles.containerProduct]}
         activeOpacity={1}
-        onPress={() => {
-          navigation.navigate("Details", { item: item });
-        }}
+        onPress={() => {onPress(item)}}
       >
         <View style={styles.containerData}>
           <FadeInImage uri={item?.image} key={item + index} route={route} />
@@ -32,22 +35,23 @@ const CharacterCard = ({ navigation, route }) => {
       </TouchableOpacity>
     );
   };
+  //search render
   return (
     <View style={{ height: "100%" }}>
       {loading === true ? (
-        <ActivityIndicator color="#FF7C66" size={30} />
+        <ActivityIndicator color="#FF7C66" size={40} />
       ) : (
         <View>
           {data?.results === undefined ? (
             <View>
               <Text style={[GlobalStyle.bold, styles.textInit]}>
-                Ingresa el nombre de un personaje para comenzar una busqueda
+                Ingresa el nombre de un personaje para comenzar una búsqueda
               </Text>
               <Lottie width={140} height={140}/>
             </View>
           ) : (
             <FlatList
-              data={data?.results}
+              data={data.results}
               renderItem={_Item}
               keyExtractor={(e, i) => e + i.toString()}
             />
@@ -70,15 +74,9 @@ const styles = StyleSheet.create({
     height: 130,
     justifyContent: "space-between",
     borderColor: "rgba(196, 196, 196, 0.3)",
-    borderWidth: 1,
+    borderWidth: 0.2,
     shadowColor: "white",
-    shadowOffset: {
-      width: 2,
-      height: 2,
-    },
-    shadowOpacity: 0.2,
-    shadowRadius: 5,
-    elevation: 20,
+    elevation: 2,
   },
   containerData: {
     top: "2%",
