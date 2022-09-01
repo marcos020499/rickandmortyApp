@@ -11,7 +11,6 @@ import Gradient from "./Gradient";
 import TextDetails from "./TextDetails";
 
 const CharacterDetails = ({ route, navigation }) => {
-
   const { item } = route.params;
   const [bgColor, setBgColor] = useState("grey");
   const isMounted = useRef(true);
@@ -46,10 +45,7 @@ const CharacterDetails = ({ route, navigation }) => {
   return (
     <View style={[{ backgroundColor: bgColor }, styles.container]}>
       <FadeInImage uri={item?.image} key={item} route={route} />
-      <TouchableOpacity
-        onPress={() => {onPress()}}
-        style={styles.feedback}
-      >
+      <TouchableOpacity onPress={() => {onPress()}} style={styles.feedback}>
         <View style={styles.iconView}>
           <Icon size={45} name="angle-left" color={"white"} />
         </View>

@@ -26,10 +26,7 @@ const CharacterCard = ({ navigation, route }) => {
         key={index}
         style={[styles.containerProduct]}
         activeOpacity={1}
-        onPress={() => {
-          onPress(item);
-        }}
-      >
+        onPress={() => {onPress(item)}}>
         <View style={styles.containerData}>
           <FadeInImage uri={item?.image} key={item + index} route={route} />
           <Text style={[GlobalStyle.bold, styles.textName]}>{item?.name}</Text>
@@ -41,7 +38,7 @@ const CharacterCard = ({ navigation, route }) => {
   
   //search render
   return (
-    <View style={{ height: "100%" }}>
+    <View style={styles.container}>
       {loading === true ? (
         <ActivityIndicator color="#FF7C66" size={40} />
       ) : (
@@ -54,7 +51,7 @@ const CharacterCard = ({ navigation, route }) => {
               <Lottie width={140} height={140} />
             </View>
           ) : (
-            <FlatList
+              <FlatList
               data={data.results}
               renderItem={_Item}
               keyExtractor={(e, i) => e + i.toString()}
@@ -68,6 +65,7 @@ const CharacterCard = ({ navigation, route }) => {
 };
 export default CharacterCard;
 const styles = StyleSheet.create({
+  container:{ height:'100%', paddingBottom:210},
   containerProduct: {
     display: "flex",
     backgroundColor: "rgba(15, 50, 54, 0.9)",
@@ -75,9 +73,8 @@ const styles = StyleSheet.create({
     alignSelf: "center",
     width: "90%",
     borderRadius: 20,
-    marginTop: 35,
+    marginTop: 20,
     height: 130,
-    justifyContent: "space-between",
     borderColor: "rgba(196, 196, 196, 0.3)",
     borderWidth: 0.2,
     shadowColor: "white",
@@ -94,11 +91,6 @@ const styles = StyleSheet.create({
   textName: {
     color: "white",
     width: "40%",
-  },
-  image: {
-    width: 100,
-    borderRadius: 10,
-    height: 100,
   },
   textInit: {
     color: "white",

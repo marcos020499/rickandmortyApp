@@ -15,7 +15,7 @@ const Alert = () => {
     if (loading) {
       setTime(
         setTimeout(() => {
-          setMessage("Se termino el tiempo de espera, vuelve a intentarlo"),
+          setMessage("Se terminó el tiempo de espera, vuelve a intentarlo"),
             setModalVisible(true);
         }, 10000)
       );
@@ -24,7 +24,7 @@ const Alert = () => {
       clearTimeout(time);
     }
     if (error) {
-      setMessage("Hubo un error en la busqueda, intentalo nuevamente"),
+      setMessage("Hubo un error en la búsqueda, inténtalo nuevamente"),
         setModalVisible(true);
     }
   }, [loading, error]);
