@@ -26,16 +26,19 @@ npm install
 IMPORTANT:
 
 - Android:
-  - Command emulator
+  - Command emulator:
+  ```sh
     `react-native run-android` for react-native-cli package users or 
     `npx react-native run-android` if you're using the latest recommended version of node.js
+  ```
   - Commad physical device
     Check that your device is properly connecting to ADB, the Android Debug Bridge, by running `adb devices`.
+    ```sh
       $ adb devices
       List of devices attached
       emulator-5554 offline   # Google emulator
       14ed2fcc device         # Physical device
-      
+     ```
     Seeing device in the right column means the device is connected. You must have only one device connected at a time.
     Type the following in your command prompt to install and launch your app on the device:
     `npx react-native run-android` 
