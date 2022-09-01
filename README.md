@@ -1,4 +1,4 @@
-# rickandmortyApp
+#🏗 rickandmortyApp
 
 Check, this is a app demo about rickandmortyapi.com, create with react native cli.
 # 🚀 Video Demo
@@ -50,7 +50,7 @@ IMPORTANT:
 
 #SRC 
 # 🏗 Components
-The ready for use react-native-components are located in `src/Components`. They are designed to be used anywhere in your app.most components are designed to be reusable
+The ready for use react-native-components are located in `src/components`. They are designed to be used anywhere in your app. Most components are designed to be reusable
 # 🧰 Hooks 
 animations for the app
 # 🏗 Pages
