@@ -1,7 +1,8 @@
 # react-native-pokeapp
 
 Check, this is a app demo about rickandmortyapi.com, create with react native cli.
-
+# 🚀 Video Demo
+this is a small video about the basic configuration to run the app https://youtu.be/32ZZN7JzHOQ
 
 ![Android demo  (2)](https://res.cloudinary.com/marcos020499/image/upload/v1661894698/ezgif.com-gif-maker_ke1xdp.gif)
 
