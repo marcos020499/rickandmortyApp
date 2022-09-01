@@ -12,12 +12,13 @@ import Icon from "react-native-vector-icons/FontAwesome";
 import GlobalStyle from "./GlobalStyle";
 import { FadeInImage } from "./FadeInImage";
 import Lottie from "./Lottie";
+import Alert from "./Alert";
 
 const CharacterCard = ({ navigation, route }) => {
   const { data, loading } = useSelector((state) => state);
-  const onPress =(item)=>{
+  const onPress = (item) => {
     navigation.navigate("Details", { item: item });
-  }
+  };
   //result items render
   _Item = ({ item, index }) => {
     return (
@@ -25,7 +26,9 @@ const CharacterCard = ({ navigation, route }) => {
         key={index}
         style={[styles.containerProduct]}
         activeOpacity={1}
-        onPress={() => {onPress(item)}}
+        onPress={() => {
+          onPress(item);
+        }}
       >
         <View style={styles.containerData}>
           <FadeInImage uri={item?.image} key={item + index} route={route} />
@@ -35,6 +38,7 @@ const CharacterCard = ({ navigation, route }) => {
       </TouchableOpacity>
     );
   };
+  
   //search render
   return (
     <View style={{ height: "100%" }}>
@@ -47,7 +51,7 @@ const CharacterCard = ({ navigation, route }) => {
               <Text style={[GlobalStyle.bold, styles.textInit]}>
                 Ingresa el nombre de un personaje para comenzar una búsqueda
               </Text>
-              <Lottie width={140} height={140}/>
+              <Lottie width={140} height={140} />
             </View>
           ) : (
             <FlatList
@@ -58,6 +62,7 @@ const CharacterCard = ({ navigation, route }) => {
           )}
         </View>
       )}
+  <Alert/>
     </View>
   );
 };
@@ -101,5 +106,5 @@ const styles = StyleSheet.create({
     fontSize: 15,
     letterSpacing: 1,
     marginHorizontal: 25,
-  }
+  },
 });

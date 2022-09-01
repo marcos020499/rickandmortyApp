@@ -8,8 +8,8 @@ import {
 import { api } from "../components/Api";
 const initialState = {
   data: [],
-  success: false,
   loading: false,
+  error: false,
   episode: [],
 };
 //get characters data
@@ -44,20 +44,22 @@ export const getReducer = createReducer(initialState, (builder) => {
   builder
     .addCase(fetchDataAsync.fulfilled, (state, action) => {
       state.data = action.payload;
-      state.success = true;
       state.error = false;
       state.loading = false;
     })
     .addCase(fetchDataAsync.pending, (state) => {
       state.loading = true;
     })
+    .addCase(fetchDataAsync.rejected, (state) => {
+      state.error = true;
+      state.loading = false;
+    })
     .addCase(episodesAsync.fulfilled, (state, action) => {
       state.episode.push(action.payload);
     })
     .addCase(resetStates, (state) => {
-      state.success = false;
       state.loading = false;
-      state.success = false;
+      state.error = false;
       state.episode = [];
     });
 });
