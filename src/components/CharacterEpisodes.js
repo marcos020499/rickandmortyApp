@@ -4,7 +4,6 @@ import {
   Text,
   StyleSheet,
   FlatList,
-  ActivityIndicator,
 } from "react-native";
 import { useSelector } from "react-redux";
 import GlobalStyle from "./GlobalStyle";

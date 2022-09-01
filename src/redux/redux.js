@@ -28,7 +28,6 @@ export const fetchDataAsync = createAsyncThunk(
 export const episodesAsync = createAsyncThunk(
   "episode/data",
   async ({ id }, thunkAPI) => {
-    console.log('ids',id)
     try {
       const response = await axios.get(`${id}`);
       return response.data;

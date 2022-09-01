@@ -33,7 +33,7 @@ const CharacterCard = ({ navigation, route }) => {
         <View style={styles.containerData}>
           <FadeInImage uri={item?.image} key={item + index} route={route} />
           <Text style={[GlobalStyle.bold, styles.textName]}>{item?.name}</Text>
-          <Icon size={35} name="angle-right" color={"white"} />
+          <Icon size={30} name="angle-right" color={"white"} />
         </View>
       </TouchableOpacity>
     );
@@ -70,10 +70,10 @@ export default CharacterCard;
 const styles = StyleSheet.create({
   containerProduct: {
     display: "flex",
-    backgroundColor: "#232A30",
+    backgroundColor: "rgba(15, 50, 54, 0.9)",
     alignItems: "center",
     alignSelf: "center",
-    width: "94%",
+    width: "90%",
     borderRadius: 20,
     marginTop: 35,
     height: 130,
@@ -81,13 +81,13 @@ const styles = StyleSheet.create({
     borderColor: "rgba(196, 196, 196, 0.3)",
     borderWidth: 0.2,
     shadowColor: "white",
-    elevation: 2,
+    elevation: 3,
   },
   containerData: {
-    top: "2%",
+    top: "2.5%",
     display: "flex",
     flexDirection: "row",
-    width: "90%",
+    width: "93%",
     alignItems: "center",
     justifyContent: "space-between",
   },

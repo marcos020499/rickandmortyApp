@@ -1,18 +1,17 @@
 import React, { useState, useEffect, useRef } from "react";
-import { View, Text, StyleSheet, TouchableOpacity } from "react-native";
+import { View, Text, StyleSheet, TouchableOpacity, ScrollView } from "react-native";
 import GlobalStyle from "./GlobalStyle";
 import Icon from "react-native-vector-icons/FontAwesome";
 import ImageColors from "react-native-image-colors";
 import { FadeInImage } from "./FadeInImage";
 import { episodesAsync, resetStates } from "../redux/redux";
 import { useDispatch } from "react-redux";
-import ScrollViewIndicator from "react-native-scroll-indicator";
 import CharacterEpisodes from "./CharacterEpisodes";
 import Gradient from "./Gradient";
 import TextDetails from "./TextDetails";
 
 const CharacterDetails = ({ route, navigation }) => {
-  
+
   const { item } = route.params;
   const [bgColor, setBgColor] = useState("grey");
   const isMounted = useRef(true);
@@ -32,7 +31,7 @@ const CharacterDetails = ({ route, navigation }) => {
     if (!item?.episode?.length) {
       return;
     }
-    item?.episode.forEach((id) => dispatch(episodesAsync({ id })));
+    item?.episode.forEach((id,index) =>{index<5 ?dispatch(episodesAsync({ id })):null});
   }, []);
   //text elements
   const elements = [
@@ -55,7 +54,7 @@ const CharacterDetails = ({ route, navigation }) => {
           <Icon size={45} name="angle-left" color={"white"} />
         </View>
       </TouchableOpacity>
-      <ScrollViewIndicator scrollIndicatorStyle={{ backgroundColor: "#FF7C66", height: 50 }}>
+      <ScrollView nestedScrollEnabled={true}>
         <TextDetails>
           <Text style={[GlobalStyle.bold, styles.textTitle]}>Información</Text>
         </TextDetails>
@@ -70,7 +69,7 @@ const CharacterDetails = ({ route, navigation }) => {
           ))}
         </Gradient>
         <CharacterEpisodes bgColor={bgColor} />
-      </ScrollViewIndicator>
+      </ScrollView>
     </View>
   );
 };

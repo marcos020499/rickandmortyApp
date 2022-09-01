@@ -44,13 +44,13 @@ const styles = StyleSheet.create({
   characterImage: {
     width: 110,
     height: 110,
-    borderRadius: 10,
+    borderRadius: 15,
   },
   characterImages: {
     width: "100%",
-    height: 350,
+    height: 400,
     zIndex: 1,
-    opacity: 0.66,
+    opacity: 0.5,
     backgroundColor: "black",
     borderBottomLeftRadius:30,
     borderBottomRightRadius:30
