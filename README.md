@@ -1,4 +1,4 @@
-# react-native-pokeapp
+# rickandmortyApp
 
 Check, this is a app demo about rickandmortyapi.com, create with react native cli.
 # 🚀 Video Demo
