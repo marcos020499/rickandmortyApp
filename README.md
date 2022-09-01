@@ -28,9 +28,14 @@ IMPORTANT:
 - Android:
   - Command emulator:
   ```sh
-    `react-native run-android` for react-native-cli package users or 
-    `npx react-native run-android` if you're using the latest recommended version of node.js
-  ```
+    `react-native run-android`
+    ```
+    for react-native-cli package users or 
+    ```sh
+    `npx react-native run-android`
+    ```
+    if you're using the latest recommended version of node.js
+  
   - Commad physical device
     Check that your device is properly connecting to ADB, the Android Debug Bridge, by running `adb devices`.
     ```sh
