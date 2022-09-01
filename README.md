@@ -49,11 +49,13 @@ IMPORTANT:
     `npx react-native run-android` 
 
 #SRC 
-# 🏗 Components
+# 🏗 components
 The ready for use react-native-components are located in `src/components`. They are designed to be used anywhere in your app. Most components are designed to be reusable
-# 🧰 Hooks 
-animations for the app
+# 🏗 fonts
+The font types for the project
+# 🧰 hooks 
+Animations for the app
 # 🏗 Pages
-the pages in the app, Home and Details Rick and Morty`s.
-# 🧰 Redux
-configuration for redux, use redux toolkit to fetch de data.
+The pages in the app, Home and Details Rick and Morty`s.
+# 🧰 redux
+Configuration for redux, use redux toolkit to fetch de data.
