@@ -15,7 +15,7 @@ const Alert = () => {
     if (loading) {
       setTime(
         setTimeout(() => {
-          setMessage("Se terminó el tiempo de espera, vuelve a intentarlo"),
+          setMessage("Se terminó el tiempo de espera, vuelve a intentarlo correcion"),
             setModalVisible(true);
         }, 10000)
       );
